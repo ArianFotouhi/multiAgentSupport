@@ -36,7 +36,9 @@ python3 multiAgent.py
 
 
 You’ll see classification, generated response, evaluation, and escalation (if needed) for each ticket.
+
 --------------------
+
 🧪 Example Ticket Walkthroughs
 
 Ticket 1: Refund Inquiry
