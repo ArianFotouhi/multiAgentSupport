@@ -37,30 +37,73 @@ python3 multiAgent.py
 
 You’ll see classification, generated response, evaluation, and escalation (if needed) for each ticket.
 
-🧠 Example Agents in Action
-Input Ticket:
+🧪 Example Ticket Walkthroughs
+Ticket 1: Refund Inquiry
 
-"Why did I get charged an extra 5% fee?"
+📝 Ticket: Can I get a refund if I change my mind?
 
-Classifier Output:
+🔍 Classification Raw Result:
+```
+{"category": "billing", "priority": "medium"}
+```
+📌 Category: BILLING | Priority: MEDIUM
 
-```
-{
-  "category": "billing",
-  "priority": "medium"
-}
-```
-Responder Output:
-```
-"Thank you for reaching out. The additional 5% charge is due to..."
-```
-Evaluator Output:
+ℹ️ Using existing Pinecone index 'index-policies'
+🔍 Performing search for: 'billing policy: Can I get a refund if I change my mind?'
 
+🧾 Proposed Response:
 ```
-{
-  "approve": true,
-  "reason": "Response is accurate and clearly explains the charge."
-}
+Hello,
+
+Thank you for reaching out regarding your refund inquiry.
+
+According to our refund policy, refunds can be issued if requested within 30 days of the original transaction date. If your purchase falls within this period, we would be happy to assist you with processing your refund.
+
+Could you please confirm the date of your transaction or provide your account details so we can verify your eligibility?
+
+If you have any further questions or concerns, please let me know—I’m here to help.
+
+Best regards,  
+[Your Name]  
+Billing Support Team
+```
+
+Final Response Approved: ✅
+
+
+
+Ticket 2: Password Rules
+📝 Ticket: What are your password rules?
+
+🔍 Classification Raw Result:
+```
+{"category": "security", "priority": "medium"}
+```
+📌 Category: SECURITY | Priority: MEDIUM
+
+ℹ️ Using existing Pinecone index 'index-policies'
+🔍 Performing search for: 'security policy: What are your password rules?'
+
+🧾 Proposed Response:
+```
+Hello,
+
+Thank you for reaching out regarding our password requirements. Our current password policy includes the following guidelines:
+
+- Passwords must be at least 12 characters in length.
+- We strongly recommend using a combination of uppercase and lowercase letters, numbers, and special characters to enhance security.
+- Additionally, multi-factor authentication (MFA) is required for all admin accounts to further protect sensitive access.
+- Please note that all system access is logged and audited regularly to ensure security compliance.
+
+If you have any further questions or need assistance, please let me know.
+
+Best regards,  
+[Your Name]  
+Customer Support
+```
+⚠️ Escalated:
+```
+User is asking about our password requirements. Escalating because inquiries related to security policies require manual review.
 ```
 🧩 Customization
 🔍 Add more categories in AUTO_ESCALATE_CATEGORIES
@@ -68,9 +111,6 @@ Evaluator Output:
 🧠 Tweak prompts in each agent for tone, verbosity, etc.
 
 📚 Change vector store namespace or connect to another backend (like FAISS or Qdrant)
-
-📦 Tech Stack
-OpenAI / Azure OpenAI
 
 Pinecone Vector Store
 
@@ -81,9 +121,3 @@ This project draws inspiration from emerging multi-agent orchestration patterns 
 
 📄 License
 MIT License — see LICENSE file for details.
-
-vbnet
-Copy
-Edit
-
-Let me know if you'd like a version with a badge section, architecture diagram, or deployment g

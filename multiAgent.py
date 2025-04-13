@@ -138,8 +138,6 @@ def handle_ticket(ticket_text):
 if __name__ == "__main__":
     tickets = [
     "Can I get a refund if I change my mind?",
-    "Why did I get charged an extra 5% fee?",
-    "Will my subscription renew automatically?",
     "What are your password rules?",
 
             ]
