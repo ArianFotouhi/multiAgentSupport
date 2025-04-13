@@ -36,8 +36,9 @@ python3 multiAgent.py
 
 
 You’ll see classification, generated response, evaluation, and escalation (if needed) for each ticket.
-
+--------------------
 🧪 Example Ticket Walkthroughs
+
 Ticket 1: Refund Inquiry
 
 📝 Ticket: Can I get a refund if I change my mind?
@@ -105,6 +106,7 @@ Customer Support
 ```
 User is asking about our password requirements. Escalating because inquiries related to security policies require manual review.
 ```
+--------------------
 🧩 Customization
 🔍 Add more categories in AUTO_ESCALATE_CATEGORIES
 
